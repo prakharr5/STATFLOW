@@ -131,7 +131,7 @@ main {
   color: white;
 }
 .container img {
-  width: 600px;
+  width: 500px;
 }
 
 .fs {
@@ -165,4 +165,39 @@ main {
 }
 ::-webkit-scrollbar {
   width: 0px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.opt {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+.opt a {
+  color: rgb(219, 219, 219);
+  text-decoration: none;
+  font-size: 30px;
+  position: relative;
+}
+
+.opt a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust this value to control the distance of the underline from the text */
+  width: 100%;
+  height: 2px; /* Adjust this value to control the thickness of the underline */
+  background-color: rgb(230, 230, 230);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.opt a:hover::after {
+  opacity: 1;
 }
